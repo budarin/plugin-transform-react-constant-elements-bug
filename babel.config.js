@@ -35,8 +35,8 @@ module.exports = function (api) {
         plugins: [
             lazyComponentPlugin,
             'babel-plugin-transform-imports',
-            // 'babel-plugin-react-local',
-            // '@babel/plugin-transform-react-constant-elements',
+            'babel-plugin-react-local',
+            '@babel/plugin-transform-react-constant-elements',
         ],
         env: {
             production: {
