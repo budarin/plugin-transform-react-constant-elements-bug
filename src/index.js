@@ -3,12 +3,12 @@ import ClientApp from './containers/ClientApp';
 import { matchUrl } from './utils/matchUrl';
 
 async function onDomContentLoaded() {
-    const foundRoute = matchUrl(location.pathname);
+    const { description: element } = matchUrl(location.pathname);
 
-    console.log('foundRoute', foundRoute);
+    console.log('foundRoute', element);
 
-    if (foundRoute && foundRoute.element) {
-        await foundRoute.element?.loader();
+    if (element && element.element) {
+        await element.element?.loader();
     }
 
     const appElement = document.getElementById('root');

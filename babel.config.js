@@ -1,7 +1,5 @@
-const lazyComponentPlugin = require('./lazyComponentBabelPlugin.js').LAZY_COMPONENT_PLUGIN;
-
-const isTesting = process.env.NODE_ENV === 'test';
 const isDev = process.env.NODE_ENV !== 'production';
+const lazyComponentPlugin = require('./lazyComponentBabelPlugin.js').LAZY_COMPONENT_PLUGIN;
 
 module.exports = function (api) {
     api.cache.using(() => process.env.NODE_ENV);
@@ -14,7 +12,7 @@ module.exports = function (api) {
                 {
                     loose: true,
                     debug: false,
-                    modules: isTesting ? 'commonjs' : false,
+                    modules: false,
                     corejs: {
                         version: '3.21.1',
                         proposals: true,
@@ -32,14 +30,15 @@ module.exports = function (api) {
                 },
             ],
         ],
-        plugins: [lazyComponentPlugin],
+        plugins: [
+            lazyComponentPlugin,
+            'babel-plugin-transform-imports',
+            'babel-plugin-react-local',
+            '@babel/plugin-transform-react-constant-elements',
+        ],
         env: {
             production: {
-                plugins: [
-                    'babel-plugin-transform-imports',
-                    'babel-plugin-react-local',
-                    '@babel/plugin-transform-react-constant-elements',
-                ],
+                plugins: [],
                 ignore: ['**/*.test.tsx', '**/*.test.ts', '__snapshots__', '__tests__'],
             },
             development: {
