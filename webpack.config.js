@@ -2,13 +2,15 @@ const path = require('path');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 
+const mode = process.env.NODE_ENV;
+
 module.exports = {
     name: 'client',
-    mode: 'production',
+    mode,
     target: 'web',
     profile: false,
     cache: { type: 'filesystem' },
-    devtool: 'inline-source-map',
+    devtool: false, //'inline-source-map',
     experiments: {
         topLevelAwait: true,
     },
@@ -65,8 +67,8 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             __DEV__: false,
-            __CLIENT__: true,
             __PROD__: true,
+            __CLIENT__: true,
             __SERVER__: false,
         }),
     ],
