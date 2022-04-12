@@ -1,10 +1,10 @@
 import { NOT_FOUND_ROUTE } from '../utils/notFoundRoute';
 
-import HomePage from '../containers/HomePage';
-import Page1Page from '../containers/Page1Page';
-import Page2Page from '../containers/Page2Page';
-import Page3Page from '../containers/Page3Page';
-import NotFoundPage from '../containers/NotFoundPage';
+import HomePage from '../pages/HomePage';
+import Page1Page from '../pages/Page1Page';
+import Page2Page from '../pages/Page2Page';
+import Page3Page from '../pages/Page3Page';
+import NotFoundPage from '../pages/NotFoundPage';
 
 export const Routes = {
     Home: 'Home',

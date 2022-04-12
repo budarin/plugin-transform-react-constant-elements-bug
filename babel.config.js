@@ -30,15 +30,14 @@ module.exports = function (api) {
                 },
             ],
         ],
-        plugins: [
-            lazyComponentPlugin,
-            'babel-plugin-transform-imports',
-            'babel-plugin-react-local',
-            '@babel/plugin-transform-react-constant-elements',
-        ],
+        plugins: [lazyComponentPlugin],
         env: {
             production: {
-                plugins: [],
+                plugins: [
+                    'babel-plugin-transform-imports',
+                    'babel-plugin-react-local',
+                    '@babel/plugin-transform-react-constant-elements',
+                ],
                 ignore: ['**/*.test.tsx', '**/*.test.ts', '__snapshots__', '__tests__'],
             },
             development: {
