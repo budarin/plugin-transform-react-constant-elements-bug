@@ -31,7 +31,7 @@ module.exports = function (api) {
             ],
             '@babel/typescript',
         ],
-        plugins: [lazyComponentPlugin],
+        plugins: [lazyComponentPlugin, 'preval'],
         env: {
             production: {
                 plugins: [
