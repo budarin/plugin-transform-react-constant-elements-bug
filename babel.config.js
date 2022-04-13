@@ -29,6 +29,7 @@ module.exports = function (api) {
                     development: isDev,
                 },
             ],
+            '@babel/typescript',
         ],
         plugins: [lazyComponentPlugin],
         env: {
@@ -37,6 +38,15 @@ module.exports = function (api) {
                     'babel-plugin-transform-imports',
                     'babel-plugin-react-local',
                     '@babel/plugin-transform-react-constant-elements',
+                    'transform-remove-console',
+                    [
+                        'strip-function-call',
+                        {
+                            strip: [
+                                // 'useWhyDidYouRender'
+                            ],
+                        },
+                    ],
                 ],
                 ignore: ['**/*.test.tsx', '**/*.test.ts', '__snapshots__', '__tests__'],
             },

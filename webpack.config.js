@@ -41,7 +41,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx|json)$/,
+                test: /\.(ts|tsx|js|jsx|json)$/,
                 include: [path.resolve('./src')],
                 exclude: [/node_modules/],
                 use: [
