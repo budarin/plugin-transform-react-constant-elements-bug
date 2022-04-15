@@ -32,4 +32,6 @@
     "typescript.tsdk": "./node_modules/typescript/lib",
     "typescript.preferences.importModuleSpecifier": "relative",
     "editor.unicodeHighlight.ambiguousCharacters": true, // Неоднозначные символы
+    "editor.unicodeHighlight.nonBasicASCII": false, // Нестандартные ASCII
+    "editor.unicodeHighlight.includeComments": false // Включая комментарии
 }

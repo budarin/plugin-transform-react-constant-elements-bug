@@ -1,0 +1,6 @@
+:global #app {
+    overflow: auto;
+    padding: 0 8px;
+    block-size: 100%;
+    isolation: isolate;
+}

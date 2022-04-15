@@ -1,0 +1,16 @@
+{
+    "id": "id",
+    "scope": "/",
+    "start_url": "/",
+    "theme_color": "#4fbf9f",
+    "background_color": "#ffffff",
+    "short_name": "Ракета",
+    "name": "Приложение Ракета",
+    "description": "Приложение Ракета. Все летает как ракета!",
+    "dir": "auto",
+    "lang": "ru-Ru",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "categories": ["education"],
+    "icons": []
+}

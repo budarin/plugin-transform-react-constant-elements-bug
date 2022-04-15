@@ -1,0 +1,331 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+* {
+    line-height: calc(1em + 0.5rem);
+}
+
+html,
+body {
+    block-size: 100%;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: system-ui;
+
+    /* font-size: clamp(16px, calc(1rem + (24 - 16) * ((100vw - 1200px) / (3000 - 1200))), 24px); */
+    /* stylelint-disable-next-line declaration-property-unit-disallowed-list */
+    font-size: clamp(16px, calc(1rem + ((1vw - 12px) * 0.4444)), 24px);
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    text-rendering: optimizelegibility;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-inline-size: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    overflow-wrap: break-word;
+}
+
+h1 {
+    --h: 3.5rem;
+
+    font-size: clamp(var(--h), calc(var(--h) + ((1vw - 0.75rem) * 0.4444)), calc(var(--h) * 1.5));
+}
+
+h2 {
+    --h: 3rem;
+
+    font-size: clamp(var(--h), calc(var(--h) + ((1vw - 0.75rem) * 0.4444)), calc(var(--h) * 1.5));
+}
+
+h3 {
+    --h: 2.5rem;
+
+    font-size: clamp(var(--h), calc(var(--h) + ((1vw - 0.75rem) * 0.4444)), calc(var(--h) * 1.5));
+}
+
+h4 {
+    --h: 2.25rem;
+
+    font-size: clamp(var(--h), calc(var(--h) + ((1vw - 0.75rem) * 0.4444)), calc(var(--h) * 1.5));
+}
+
+h5 {
+    --h: 2rem;
+
+    font-size: clamp(var(--h), calc(var(--h) + ((1vw - 0.75rem) * 0.4444)), calc(var(--h) * 1.5));
+}
+
+h6 {
+    --h: 1.75rem;
+
+    font-size: clamp(var(--h), calc(var(--h) + ((1vw - 0.75rem) * 0.4444)), calc(var(--h) * 1.5));
+}
+
+p {
+    margin-block-end: 1em;
+    max-block-size: 70ch;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+    font-size: 75%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+    position: relative;
+    font-size: 70%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sub {
+    inset-block-end: -0.25em;
+}
+
+sup {
+    inset-block-start: -0.5em;
+}
+
+/* forms */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0; /* 2 */
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+
+    /* line-height: 1.15; 1 */
+}
+
+/**
+ * 1. Show the overflow in Edge.
+ */
+
+input {
+    overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    /* stylelint-disable-next-line property-no-vendor-prefix, plugin/no-unsupported-browser-features */
+    -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+    display: table; /* 1 */
+    padding: 0; /* 3 */
+    max-inline-size: 100%; /* 1 */
+    white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+    block-size: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type='search'] {
+    /* stylelint-disable-next-line property-no-vendor-prefix, plugin/no-unsupported-browser-features */
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type='search']::-webkit-search-decoration {
+    /* stylelint-disable-next-line property-no-vendor-prefix, plugin/no-unsupported-browser-features */
+    -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+    /* stylelint-disable-next-line property-no-vendor-prefix, plugin/no-unsupported-browser-features */
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+}
+
+/* Interactive */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+    display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+    display: list-item;
+}
+
+/* --------------------------------------------------------------------------- */
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+[disabled] {
+    /* stylelint-disable-next-line plugin/no-unsupported-browser-features */
+    cursor: not-allowed;
+}
+
+button:not([disabled]) {
+    cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce), (update: slow) {
+    *,
+    *::before,
+    *::after {
+        /* stylelint-disable-next-line */
+        animation-duration: 0.01ms !important;
+        /* stylelint-disable-next-line */
+        animation-iteration-count: 1 !important;
+        /* stylelint-disable-next-line */
+        transition-duration: 0.01ms !important;
+    }
+
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+}

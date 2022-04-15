@@ -1,0 +1,37 @@
+:root {
+    /* https://open-props.style/ */
+
+    /* colors */
+    --color-black: black;
+    --color-white: white;
+    --color-green: #4fbf9f;
+
+    /* typography */
+
+    --line-height: 1.5;
+
+    /* gradients */
+
+    /* shadows */
+
+    /* aspect-ratios */
+
+    /* easing */
+
+    /* animations */
+
+    /* sizes */
+
+    /* borders */
+
+    /* border raduss */
+
+    /* z-indexes */
+
+    /* media queries */
+
+    /* app */
+    --brand-color: var(--color-green);
+    --text-color: var(--color-black);
+    --background-color: var(var(--color-white));
+}
